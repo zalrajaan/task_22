@@ -25,6 +25,7 @@ from api.views import (
     RestaurantDeleteView,
     RestaurantCreateView,
     RegisterView,
+    LoginView,
 )
 
 urlpatterns = [
@@ -49,6 +50,7 @@ urlpatterns = [
     path('api/<int:restaurant_id>/update/', RestaurantUpdateView.as_view(), name='api-update'),
     path('api/<int:restaurant_id>/delete/', RestaurantDeleteView.as_view(), name='api-delete'),
     path('api/register/', RegisterView.as_view(), name='api-register'),
+    path('api/login/', LoginView.as_view(), name='api-login'),
 ]
 
 if settings.DEBUG:
