@@ -10,7 +10,7 @@ from .views import (
     RestaurantUpdateView,
     RestaurantDeleteView,
     RegisterView,
-    LoginView,
+   
 )
 
 class RestaurantAPITest(TestCase):
@@ -91,11 +91,6 @@ class RestaurantAPITest(TestCase):
         self.assertEqual(response.status_code, 201)
         self.assertEqual(User.objects.count(), 4)
 
-    def test_login_view(self):
-        login_url = reverse("api-login")
-        request = self.factory.post(login_url, data=self.user_data_2)
-        response = LoginView.as_view()(request)
-        self.assertEqual(response.status_code, 200)
 
     def test_restaurant_list_view(self):
         list_url = reverse("api-list")

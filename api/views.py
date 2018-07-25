@@ -18,7 +18,9 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 
 
 #Complete ME!
-class LoginView():
+# class LoginView(serializers.Serializer):
+#     username = serializers.CharField()
+#     password = serializers.CharField(write_only=True)
 
 
 class RegisterView(CreateAPIView):
